@@ -1,0 +1,16 @@
+{
+  "name": "githhub",
+  "version": "1.0.0",
+  "description": "A minimal HTTP server for testing REST APIs with browser-friendly JSON display.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}

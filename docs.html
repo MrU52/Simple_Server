@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple API Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 30px; }
+        .server-link {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .endpoint {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .method { 
+            background: #2196F3;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .post { background: #4CAF50; }
+        code { background: #e8e8e8; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+    <h1>Simple API Server</h1>
+    
+    <p><strong>Server URL:</strong> <a href="http://localhost:3000" target="_blank" class="server-link">http://localhost:3000</a></p>
+    
+    <h2>What is this?</h2>
+    <p>A simple web server that responds to different web addresses with JSON data.</p>
+    
+    <h2>Technologies Used</h2>
+    <ul>
+        <li><strong>Node.js</strong> - Runs JavaScript on the server</li>
+        <li><strong>Express.js</strong> - Makes creating web servers easy</li>
+    </ul>
+    
+    <h2>Available URLs</h2>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> <code>/</code><br>
+        <strong>Home page</strong> - Shows all available links
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> <code>/health</code><br>
+        <strong>Health check</strong> - Shows if server is working<br>
+        Returns: <code>{"status": "ok"}</code>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> <code>/time</code><br>
+        <strong>Current time</strong> - Shows current date and time<br>
+        Returns: <code>{"time": "2025-08-21T..."}</code>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> <code>/json</code><br>
+        <strong>Sample data</strong> - Shows example JSON data<br>
+        Returns: <code>{"data": [{"id": 1, "name": "test"}]}</code>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method">GET</span> <code>/echo</code><br>
+        <strong>Echo instructions</strong> - Explains how to send data<br>
+        Returns: <code>{"message": "Send POST to echo data"}</code>
+    </div>
+    
+    <div class="endpoint">
+        <span class="method post">POST</span> <code>/echo</code><br>
+        <strong>Echo back data</strong> - Sends back whatever you send to it<br>
+        Send: Any JSON data<br>
+        Returns: <code>{"echo": your_data_here}</code>
+    </div>
+    
+    <h2>How to Start</h2>
+    <ol>
+        <li>Open terminal/command prompt</li>
+        <li>Go to the project folder</li>
+        <li>Type: <code>node server.js</code></li>
+        <li>Visit: <code>http://localhost:3000</code></li>
+    </ol>
+    
+    <h2>How to Test</h2>
+    <ul>
+        <li><strong>Easy way:</strong> Click any link in your browser</li>
+        <li><strong>All URLs work:</strong> Just type them in your browser address bar</li>
+        <li><strong>POST testing:</strong> Use tools like Postman or curl</li>
+    </ul>
+    
+    <p style="margin-top: 40px; text-align: center;">
+        <a href="http://localhost:3000" target="_blank" class="server-link">Go to Server →</a>
+    </p>
+    
+</body>
+</html>
